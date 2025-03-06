@@ -1,0 +1,14 @@
+{
+  "name": "listeo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch assets/scss:assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.85.1"
+  }
+}
