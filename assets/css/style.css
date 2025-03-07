@@ -4,8 +4,36 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+header .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/listeo_background_mockup.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
+  opacity: 1;
+}
+header .background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
 header .allNav {
   font-family: sans-serif;
+  position: sticky;
 }
 header .allNav nav {
   display: flex;
@@ -24,14 +52,14 @@ header .allNav nav .leftSide .rating {
   margin-left: 20px;
 }
 header .allNav nav .leftSide .rating a {
-  color: #222;
+  color: white;
   display: inline-block;
   width: 100%;
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.0509803922);
+  background-color: rgba(69, 68, 68, 0.568627451);
   padding: 3px 8px;
   transition: 0.3s;
   font-size: 13px;
@@ -42,43 +70,113 @@ header .allNav nav .leftSide .rating a img {
   display: block;
 }
 header .allNav nav .leftSide .rating a span {
-  color: #222;
+  color: white;
   font-weight: bold;
 }
 header .allNav nav .leftSide .rating a span.view {
   color: #bbb;
   font-weight: 600;
 }
-header .allNav nav .nav {
+header .allNav nav .rightSide {
   display: flex;
   align-items: center;
 }
-header .allNav nav .nav a {
-  color: #222;
+header .allNav nav .rightSide a {
+  color: white;
 }
-header .allNav nav .nav ul {
+header .allNav nav .rightSide ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
 }
-header .allNav nav .nav ul li {
-  width: 120px;
+header .allNav nav .rightSide ul li {
+  width: 130px;
   height: 100%;
   margin: 0px 3px 0px 3px;
   text-align: center;
   font-size: 17px;
+  font-weight: 500;
 }
-header .allNav nav .nav ul :last-child button {
-  border-style: none;
-  border-color: #A5B8B8;
+header .allNav nav .rightSide ul li:hover {
+  background-color: #f91942;
+  color: white;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+header .allNav nav .rightSide ul li:hover a {
+  color: white;
+}
+header .allNav nav .rightSide ul .dropdown {
+  color: white;
+}
+header .allNav nav .rightSide ul .dropdown .dropdown-menu {
+  display: none;
+  width: 300px;
+  height: 550px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0;
+  margin-top: 3px;
+  z-index: 10;
+}
+header .allNav nav .rightSide ul .dropdown .dropdown-menu li {
+  list-style: none;
+  width: 300px;
+  height: 45px;
+  padding: 20px;
+  text-align: start;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+header .allNav nav .rightSide ul .dropdown .dropdown-menu li:hover {
+  background-color: transparent;
+}
+header .allNav nav .rightSide ul .dropdown .dropdown-menu li a {
+  color: #222;
+}
+header .allNav nav .rightSide ul .dropdown .dropdown-menu li a:hover {
+  color: #f91942;
+  background-color: #f7efef;
+  border-radius: 6px;
+  padding: 3px;
+}
+header .allNav nav .rightSide ul .dropdown:hover .dropdown-menu {
+  display: block;
+}
+header .allNav nav .rightSide ul .button button {
+  border: none;
   background-color: #f91942;
   color: white;
   border-radius: 7px;
   font-size: 15px;
   padding: 9px 18px;
   font-weight: 500px;
-  line-height: 19px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+header .allNav nav .rightSide ul .button button span {
+  display: inline-block;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+header .allNav nav .rightSide ul .button button:hover {
+  background-color: white;
+  color: #222;
+}
+header .allNav nav .rightSide ul .button button:hover span {
+  transform: rotateX(360deg);
+}
+header .middle .logo .headings {
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  margin: 10px 0;
+}
+header .middle .logo .headings .heading.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=style.css.map */
