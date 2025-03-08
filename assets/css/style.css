@@ -5,7 +5,7 @@
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.629);
   position: relative;
 }
 header .background {
@@ -17,7 +17,7 @@ header .background {
   background-image: url(https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/listeo_background_mockup.jpg);
   background-size: cover;
   background-position: center;
-  filter: blur(2px);
+  filter: blur(1px);
   z-index: -1;
   opacity: 1;
 }
@@ -167,16 +167,84 @@ header .allNav nav .rightSide ul .button button:hover {
 header .allNav nav .rightSide ul .button button:hover span {
   transform: rotateX(360deg);
 }
+header .middle .logo {
+  color: white;
+}
+header .middle .logo a {
+  text-decoration: none;
+  color: rgba(241, 185, 0, 0.9019607843);
+  background-color: rgba(241, 185, 0, 0.1490196078);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
 header .middle .logo .headings {
   color: white;
-  opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   margin: 10px 0;
 }
 header .middle .logo .headings .heading.show {
-  opacity: 1;
   transform: translateY(0);
+}
+header .middle .logo p.one {
+  font-weight: bold;
+  font-size: 40px;
+}
+header .middle .logo p.two {
+  font-size: 40px;
+}
+header .middle .logo p.three {
+  font-size: 19px;
+  color: #9b9797;
+  padding-top: 30px;
+}
+header .middle .logo p.three b {
+  color: white;
+}
+header .middle .logo .buttons {
+  padding-top: 30px;
+}
+header .middle .logo .buttons button {
+  border: none;
+  background-color: #f91942;
+  color: white;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 20px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+header .middle .logo .buttons button span {
+  display: inline-block;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+header .middle .logo .buttons button:hover {
+  background-color: white;
+  color: #222;
+}
+header .middle .logo .buttons button:hover span {
+  transform: rotateX(360deg);
+}
+header .middle .logo .buttons :first-child {
+  margin-right: 10px;
+}
+header .middle .logo .buttons button.demo {
+  background-color: transparent;
+  border: 2px solid white;
+}
+header .middle .logo .buttons button.demo:hover {
+  background-color: white;
+}
+header .middle .logo .aprovedSides {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  font-size: 18px;
+  padding-top: 40px;
+}
+header .middle .logo .aprovedSides svg {
+  color: #f91942;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,6 +23,7 @@
                     </div>
                     <div class="rating">
                         <a 
+                            id="rateLink"
                             href="https://themeforest.net/item/listeo-directory-listings-wordpress-theme/reviews/23239259?reviews_controls%5Bsort%5D=ratings_descending">
                             <img src="https://purethemes.net/images/header_stars.svg" alt="rateStars">
                             <span>5.0</span>
@@ -88,17 +89,21 @@
                     <h1 class="heading">The Best Rated</h1>
                     <h1 class="heading">Multi Vendor</h1>                    
                 </div>
-                <p>Directory & Listings</p>
-                <p>WordPress Theme</p>
+                <p class="one">Directory & Listings</p>
+                <p class="two">WordPress Theme</p>
                 <a href="#">5.0 out of 5 stars based on 389 ratings</a>
-                <p>
-                    Build a professional directory website similar to Yelp, Airbnb,<br/>
-                    Booking.com, Gumtree, OLX or multi-vendor marketplace like Etsy
+                <p class="three">
+                    Build a professional directory website similar to <b>Yelp, Airbnb,<br/>
+                        Booking.com, Gumtree, OLX</b> or multi-vendor marketplace like <b>Etsy</b>
                 </p>
                 <div class="buttons">
                     <form action="">
-                        <button type="submit">Buy Now - $79</button>
-                        <button type="submit">Browse Demos</button>
+                        <button type="submit">
+                            <span>Buy Now - $79</span>
+                        </button>
+                        <button type="submit" class="demo">
+                            <span>Browse Demos</span>
+                        </button>
                     </form>
                 </div>
                 <div class="aprovedSides">
@@ -122,11 +127,27 @@
                     </p>
                 </div>
             </div>
-            <!-- <div class="video">
-                <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/explainer-video-1.png" alt="onVideo">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QDQ4i9pCxuM?si=AcU0n1KBYtWD5M1H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <a class="ekit_icon_button glow-btn ekit-video-popup ekit-video-popup-btn" href="https://www.youtube.com/embed/QDQ4i9pCxuM?feature=oembed?playlist=QDQ4i9pCxuM&mute=0&autoplay=0&loop=no&controls=1&start=0&end=" aria-label="video-popup">…</a>
-            </div> -->
+            <button class="show-video-btn" onclick="showVideo()">▶ Watch Video</button>
+            <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/explainer-video-1.png" alt="onVideo">
+            <div class="video-overlay" id="videoOverlay">
+              <div class="video-container">
+                <iframe 
+                    width="560" height="315" 
+                    src="https://www.youtube.com/embed/QDQ4i9pCxuM?si=AcU0n1KBYtWD5M1H" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <a 
+                class="ekit_icon_button glow-btn ekit-video-popup ekit-video-popup-btn" 
+                href="https://www.youtube.com/embed/QDQ4i9pCxuM?feature=oembed?playlist=QDQ4i9pCxuM&mute=0&autoplay=0&loop=no&controls=1&start=0&end=" 
+                aria-label="video-popup">
+                </a>
+                <button class="close-btn" onclick="closeVideo()">✖</button>
+              </div>
+            </div>
+
         </div>
     </header>
 </body>
