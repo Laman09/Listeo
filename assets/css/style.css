@@ -174,7 +174,7 @@ header .allNav nav .rightSide ul .button button:hover span {
   transform: rotateX(360deg);
 }
 header .allNav nav.scrolled {
-  transition: all 0.5s linear;
+  transition: background 0.3s linear;
   background-color: white;
   width: 100%;
   padding: 15px;
@@ -184,6 +184,15 @@ header .allNav nav.scrolled .visibleImage a img {
 }
 header .allNav nav.scrolled .hiddenImage a img {
   display: block;
+}
+header .allNav nav.scrolled .rating a {
+  background-color: rgba(0, 0, 0, 0.0509803922);
+}
+header .allNav nav.scrolled .rating a span {
+  color: #222;
+}
+header .allNav nav.scrolled .rating a span.view {
+  color: #888888;
 }
 header .allNav nav.scrolled .rightSide {
   display: flex;
@@ -393,12 +402,108 @@ header .middle .video .video-popup.active {
 }
 
 main {
+  text-align: center;
+  padding: 40px;
   background-color: white;
 }
-main .container {
+main .wrapper {
+  position: relative;
   background-color: white;
-  padding: 200px;
-  height: 100%;
+}
+main .wrapper .container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 1300px;
+  display: flex;
+  position: absolute;
+  bottom: -100px;
+  left: 70px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+main .wrapper .container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+main .wrapper .container h2 .highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+main .wrapper .container h2 .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 5px;
+  background: rgba(241, 226, 174, 0.7490196078);
+}
+main .wrapper .container .features {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 20px;
+}
+main .wrapper .container .features ul {
+  list-style: none;
+  padding: 0;
+}
+main .wrapper .container .features ul li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+main .wrapper .container .features ul li svg {
+  color: rgba(60, 171, 0, 0.2196078431);
+  margin-right: 10px;
+}
+main .demos {
+  padding: 160px;
+}
+main .demos .title p {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222;
+}
+main .demos .title p.note {
+  font-weight: 300;
+  font-size: 17px;
+  color: #777;
+}
+main .demos .title p.note .highlight2 {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+}
+main .demos .title p.note .highlight2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 30px;
+  background: rgba(239, 226, 180, 0.537254902);
+}
+main .demos .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .demos .cards .card {
+  width: 100px;
+  height: 200px;
+}
+main .demos .cards .card .browseImg {
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
