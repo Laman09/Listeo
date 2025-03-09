@@ -1,21 +1,25 @@
-document.getElementById('openLink').addEventListener('click', function(e) {
+//docs click: new tab
+document.getElementById('docsLink').addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
     window.open(href, '_blank');
 });
 
+//button click: new tab
 document.getElementById('buttonLink').addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
     window.open(href, '_blank');
 });
 
+//rating click:new tab
 document.getElementById('rateLink').addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
     window.open(href, '_blank');
 });
 
+//headings visibility
 const headings = document.querySelectorAll('.heading');
 function nextHeading() {
     const active = document.querySelector('.heading.active');
@@ -25,6 +29,7 @@ function nextHeading() {
 }
 setInterval(nextHeading, 3000);
 
+//intro video opening
 function showVideo() {
     const playVideo = document.getElementById("playVideo");
     const video = document.getElementById("youtubeVideo");
@@ -39,7 +44,6 @@ function closeVideo() {
     playVideo.classList.remove("active");
     video.src = video.src.replace("&autoplay=1", "");
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     const playButton = document.querySelector(".playBtn");
     const closeButton = document.querySelector(".closeBtn");
@@ -52,10 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeButton.addEventListener("click", () => {
         videoPopup.classList.remove("active");
-        youtubeVideo.src = youtubeVideo.src; 
+        youtubeVideo.src = youtubeVideo.src;
     });
 });
 
+//booking video opening
 function buttonPlay() {
     const playVideo = document.getElementById("bookingVideo");
     const video = document.getElementById("youtubeBooking");
@@ -63,7 +68,6 @@ function buttonPlay() {
     playVideo.classList.add("active");
     video.src += "&autoplay=1";
 }
-
 function buttonClose() {
     const playVideo = document.getElementById("bookingVideo");
     const video = document.getElementById("youtubeBooking");
@@ -72,22 +76,7 @@ function buttonClose() {
     video.src = video.src.replace("&autoplay=1", "");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const playButton = document.querySelector(".playBtn");
-    const closeButton = document.querySelector(".closeBtn");
-    const videoPopup = document.getElementById("bookingVideo");
-    const youtubeVideo = document.getElementById("youtubeBooking");
-
-    playButton.addEventListener("click", () => {
-        videoPopup.classList.add("active");
-    });
-
-    closeButton.addEventListener("click", () => {
-        videoPopup.classList.remove("active");
-        youtubeVideo.src = youtubeVideo.src; 
-    });
-});
-
+//navbar scrolling
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("navbar");
 
@@ -100,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//card click: new tab
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".card");
 

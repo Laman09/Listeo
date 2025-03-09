@@ -707,7 +707,7 @@ main .booking .keySystem button:hover {
   background-color: #f6d6db;
   transition: 0.3s;
 }
-main .booking .video-popup {
+main .booking .booking-popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -722,17 +722,17 @@ main .booking .video-popup {
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-main .booking .video-popup .hiddenVideo {
+main .booking .booking-popup .hiddenGuide {
   position: relative;
   width: 80%;
   max-width: 1000px;
 }
-main .booking .video-popup .hiddenVideo iframe {
+main .booking .booking-popup .hiddenGuide iframe {
   width: 100%;
   height: 500px;
   border-radius: 10px;
 }
-main .booking .video-popup .hiddenVideo .closeBtn {
+main .booking .booking-popup .hiddenGuide .closeBtn {
   position: absolute;
   top: -35px;
   right: -50px;
@@ -743,7 +743,7 @@ main .booking .video-popup .hiddenVideo .closeBtn {
   padding: 5px 10px;
   cursor: pointer;
 }
-main .booking .video-popup.active {
+main .booking .booking-popup.active {
   visibility: visible;
   opacity: 1;
 }

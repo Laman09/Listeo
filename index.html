@@ -65,7 +65,7 @@
                             </a>
                         </li>
                         <li class="fourth">
-                            <a href="https://docs.purethemes.net/listeo/" id="openLink">
+                            <a href="https://docs.purethemes.net/listeo/" id="docsLink">
                                 Docs
                                 <svg 
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
@@ -158,13 +158,13 @@
                 <div class="video-popup">
                     <div class="hiddenVideo">
                         <iframe 
-                        width="560" height="315" 
-                        id="youtubeVideo"
-                        src="https://www.youtube.com/embed/QDQ4i9pCxuM?si=AcU0n1KBYtWD5M1H" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"     referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
+                            width="560" height="315" 
+                            id="youtubeVideo"
+                            src="https://www.youtube.com/embed/QDQ4i9pCxuM?si=AcU0n1KBYtWD5M1H" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"     referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
                         </iframe>
                         <a 
                             class="ekit_icon_button glow-btn ekit-video-popup ekit-video-popup-btn" 
@@ -172,8 +172,8 @@
                             aria-label="video-popup">
                         </a>
                         <button 
+                            type="submit"
                             class="closeBtn"
-                            id="closeVideo"
                             onclick="closeVideo()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
@@ -454,7 +454,7 @@
         </section>
         <section id="booking">
             <div class="booking">
-                <div class="keySystem" id="videoPlay">
+                <div class="keySystem">
                     <span class="highlight2">Key Features</span>
                     <p>Advanced <span>Booking System</span></p>
                     <p>Listeo includes <b>a built-in and free advanced booking system</b> that offers complete<br>
@@ -469,8 +469,8 @@
                         </svg>
                     </button>
                 </div>
-                <div class="video-popup" id="bookingVideo">
-                    <div class="hiddenVideo">
+                <div class="booking-popup" id="bookingVideo">
+                    <div class="hiddenGuide">
                         <iframe
                             width="560"
                             height="315"
@@ -481,7 +481,8 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>
-                        <button 
+                        <button
+                            type="submit"
                             class="closeBtn"
                             onclick="buttonClose()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">

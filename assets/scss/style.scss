@@ -728,7 +728,7 @@ main {
                 }
             }
         }
-        .video-popup{
+        .booking-popup{
             position: fixed;
             top: 0;
             left: 0;
@@ -742,7 +742,7 @@ main {
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease, visibility 0.3s ease;
-            .hiddenVideo {
+            .hiddenGuide {
                 position: relative;
                 width: 80%;
                 max-width: 1000px;
@@ -764,7 +764,7 @@ main {
                 }
             }
         }
-        .video-popup.active {
+        .booking-popup.active {
             visibility: visible;
             opacity: 1;
         }
