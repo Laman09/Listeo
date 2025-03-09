@@ -26,7 +26,7 @@ function nextHeading() {
 setInterval(nextHeading, 3000);
 
 function showVideo() {
-    const playButton = document.getElementById("playVideo");
+    const playVideo = document.getElementById("playVideo");
     const video = document.getElementById("youtubeVideo");
     
     playVideo.classList.add("active");
@@ -45,6 +45,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButton = document.querySelector(".closeBtn");
     const videoPopup = document.querySelector(".video-popup");
     const youtubeVideo = document.getElementById("youtubeVideo");
+
+    playButton.addEventListener("click", () => {
+        videoPopup.classList.add("active");
+    });
+
+    closeButton.addEventListener("click", () => {
+        videoPopup.classList.remove("active");
+        youtubeVideo.src = youtubeVideo.src; 
+    });
+});
+
+function buttonPlay() {
+    const playVideo = document.getElementById("bookingVideo");
+    const video = document.getElementById("youtubeBooking");
+
+    playVideo.classList.add("active");
+    video.src += "&autoplay=1";
+}
+
+function buttonClose() {
+    const playVideo = document.getElementById("bookingVideo");
+    const video = document.getElementById("youtubeBooking");
+
+    playVideo.classList.remove("active");
+    video.src = video.src.replace("&autoplay=1", "");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.querySelector(".playBtn");
+    const closeButton = document.querySelector(".closeBtn");
+    const videoPopup = document.getElementById("bookingVideo");
+    const youtubeVideo = document.getElementById("youtubeBooking");
 
     playButton.addEventListener("click", () => {
         videoPopup.classList.add("active");
@@ -80,14 +112,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-// document.querySelectorAll('.dropdown-menu li').forEach(item => {
-//     item.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       const target = item.getAttribute('data-target');
-//       const section = document.getElementById(target);
-      
-//         if (section) {
-//             section.scrollIntoView({ behavior: 'smooth' });
-//         }
-//     });
-// });

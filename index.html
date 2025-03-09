@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="background"></div>
-        <div class="allNav">
+        <div class="allNav" id="intro">
             <nav id="navbar">
                 <div class="leftSide">
                     <div class="visibleImage">
@@ -38,14 +38,14 @@
                 </div>
                 <div class="rightSide">
                     <ul>
-                        <li class="first" data-target="themes"><a href="#theme-demos-block">Theme Demos</a></li>
+                        <li class="first" data-target="themes"><a href="#themes">Theme Demos</a></li>
                         <li class="dropdown">
                             Features
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062" />
                             </svg>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Booking System</a></li>
+                                <li><a href="#booking">Booking System</a></li>
                                 <li><a href="#">Multi-Vendor Marketplace</a></li>
                                 <li><a href="#">Monetization Features</a></li>
                                 <li><a href="#">Front-End Dashboard</a></li>
@@ -132,8 +132,8 @@
                     </p>
                 </div>
             </div>
-            <div class="video">
-                <div class="videoImage" id="playVideo">
+            <div class="video" id="playVideo">
+                <div class="videoImage">
                     <img 
                         src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/explainer-video-1.png" 
                         alt="onVideo"
@@ -165,19 +165,20 @@
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"     referrerpolicy="strict-origin-when-cross-origin" 
                         allowfullscreen>
-                    </iframe>
-                    <a 
-                        class="ekit_icon_button glow-btn ekit-video-popup ekit-video-popup-btn" 
-                        href="https://www.youtube.com/embed/QDQ4i9pCxuM?feature=oembed?playlist=QDQ4i9pCxuM&mute=0&autoplay=0&loop=no&  controls=1&start=0&end=" 
-                        aria-label="video-popup">
-                    </a>
-                    <button 
-                        class="closeBtn"
-                        onclick="closeVideo()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
-                        </svg>
-                    </button>
+                        </iframe>
+                        <a 
+                            class="ekit_icon_button glow-btn ekit-video-popup ekit-video-popup-btn" 
+                            href="https://www.youtube.com/embed/QDQ4i9pCxuM?feature=oembed?playlist=QDQ4i9pCxuM&mute=0&autoplay=0&loop=no&  controls=1&start=0&end=" 
+                            aria-label="video-popup">
+                        </a>
+                        <button 
+                            class="closeBtn"
+                            id="closeVideo"
+                            onclick="closeVideo()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -186,7 +187,7 @@
     <nav id="vertical">
         <ul>
             <li>
-                <a href=""></a>
+                <a href="#intro"></a>
                 <span class="dot"></span>
                 <span class="label">Intro</span>
             </li>
@@ -348,7 +349,7 @@
                 <div class="title">
                     <p>Pixel Perfect Demos</p>
                     <p class="note">
-                        Ready to be customized with <span class="highlight2">Elementor</span> page builder and a large library of elements.
+                        Ready to be customized with <span>Elementor</span> page builder and a large library of elements.
                     </p>
                 </div>
                 <div class="cards">
@@ -447,6 +448,52 @@
                             </p>
                             <img src="images/service.png" alt="services">
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="booking">
+            <div class="booking">
+                <div class="keySystem" id="videoPlay">
+                    <span class="highlight2">Key Features</span>
+                    <p>Advanced <span>Booking System</span></p>
+                    <p>Listeo includes <b>a built-in and free advanced booking system</b> that offers complete<br>
+                        control over online reservation methods and <b>QR code verification system</b>.</p>
+                    <button
+                        type="submit"
+                        class="playBtn"
+                        onclick="buttonPlay()">
+                        Watch Booking Guide Video
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13.293 7.293a1 1 0 0 0 0 1.414L15.586 11H8a1 1 0 0 0 0 2h7.586l-2.293 2.293a.999.999 0 1 0 1.414 1.414L19.414 12l-4.707-4.707a1 1 0 0 0-1.414 0" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="video-popup" id="bookingVideo">
+                    <div class="hiddenVideo">
+                        <iframe
+                            width="560"
+                            height="315"
+                            id="youtubeBooking"
+                            src="https://www.youtube.com/embed/qS3a6wuVdhY?si=TKhQJyh9rrQNNcY2"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                        <button 
+                            class="closeBtn"
+                            onclick="buttonClose()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="qrCode">
+                    <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/QR-CODE-BTN.svg" alt="qrCode">
+                    <div class="clickQR">
+                        
                     </div>
                 </div>
             </div>
