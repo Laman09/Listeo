@@ -67,3 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            const url = card.getAttribute("data-url");
+            if (url) {
+                window.open(url, "_blank");
+            }
+        });
+    });
+});
+// document.querySelectorAll('.dropdown-menu li').forEach(item => {
+//     item.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       const target = item.getAttribute('data-target');
+//       const section = document.getElementById(target);
+      
+//         if (section) {
+//             section.scrollIntoView({ behavior: 'smooth' });
+//         }
+//     });
+// });
