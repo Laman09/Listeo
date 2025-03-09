@@ -5,7 +5,7 @@
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.629);
+  background-color: rgba(0, 0, 0, 0.673);
   position: relative;
 }
 header .background {
@@ -33,11 +33,13 @@ header .background::before {
 }
 header .allNav {
   font-family: sans-serif;
-  position: sticky;
 }
 header .allNav nav {
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
   align-items: center;
   padding: 30px;
 }
@@ -47,6 +49,12 @@ header .allNav nav a {
 header .allNav nav .leftSide {
   display: flex;
   align-items: center;
+}
+header .allNav nav .leftSide .visibleImage a img {
+  display: block;
+}
+header .allNav nav .leftSide .hiddenImage a img {
+  display: none;
 }
 header .allNav nav .leftSide .rating {
   margin-left: 20px;
@@ -115,17 +123,16 @@ header .allNav nav .rightSide ul .dropdown {
 header .allNav nav .rightSide ul .dropdown .dropdown-menu {
   display: none;
   width: 300px;
-  height: 550px;
+  height: 500px;
   background-color: white;
   border-radius: 8px;
   padding: 0;
   margin-top: 3px;
-  z-index: 10;
 }
 header .allNav nav .rightSide ul .dropdown .dropdown-menu li {
   list-style: none;
   width: 300px;
-  height: 45px;
+  height: 10px;
   padding: 20px;
   text-align: start;
   margin-bottom: 0;
@@ -154,7 +161,6 @@ header .allNav nav .rightSide ul .button button {
   font-size: 15px;
   padding: 9px 18px;
   font-weight: 500px;
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 header .allNav nav .rightSide ul .button button span {
   display: inline-block;
@@ -166,6 +172,56 @@ header .allNav nav .rightSide ul .button button:hover {
 }
 header .allNav nav .rightSide ul .button button:hover span {
   transform: rotateX(360deg);
+}
+header .allNav nav.scrolled {
+  transition: all 0.5s linear;
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+}
+header .allNav nav.scrolled .visibleImage a img {
+  display: none;
+}
+header .allNav nav.scrolled .hiddenImage a img {
+  display: block;
+}
+header .allNav nav.scrolled .rightSide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .allNav nav.scrolled .rightSide a {
+  color: #222;
+}
+header .allNav nav.scrolled .rightSide ul li:hover {
+  background-color: #f7efef;
+  color: #f91942;
+}
+header .allNav nav.scrolled .rightSide ul li:hover a {
+  color: #f91942;
+}
+header .allNav nav.scrolled .rightSide ul .dropdown {
+  color: #222;
+}
+header .allNav nav.scrolled .rightSide ul .dropdown .dropdown-menu li a {
+  color: #222;
+}
+header .allNav nav.scrolled .rightSide ul .dropdown .dropdown-menu li a:hover {
+  color: #f91942;
+  background-color: #f7efef;
+}
+header .allNav nav.scrolled .rightSide ul .button button {
+  background-color: #181818;
+  color: white;
+}
+header .allNav nav.scrolled .rightSide ul .button button:hover {
+  background-color: #f91942;
+}
+header .middle {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 30px;
+  padding-top: 150px;
 }
 header .middle .logo {
   color: white;
@@ -180,19 +236,30 @@ header .middle .logo a {
   border-radius: 6px;
 }
 header .middle .logo .headings {
-  color: white;
-  transform: translateY(20px);
-  margin: 10px 0;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  overflow: hidden;
 }
-header .middle .logo .headings .heading.show {
-  transform: translateY(0);
+header .middle .logo .headings .heading {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 400;
+  opacity: 0;
+  margin-bottom: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+header .middle .logo .headings .heading.active {
+  opacity: 1;
 }
 header .middle .logo p.one {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
+  margin-bottom: 0;
 }
 header .middle .logo p.two {
-  font-size: 40px;
+  font-size: 45px;
 }
 header .middle .logo p.three {
   font-size: 19px;
@@ -242,9 +309,96 @@ header .middle .logo .aprovedSides {
   width: 500px;
   font-size: 18px;
   padding-top: 40px;
+  padding-bottom: 100px;
 }
 header .middle .logo .aprovedSides svg {
   color: #f91942;
+}
+header .middle .video {
+  position: relative;
+}
+header .middle .video .videoImage {
+  position: relative;
+  margin-top: 100px;
+}
+header .middle .video .videoImage img {
+  width: 600px;
+  height: 350px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+header .middle .video .videoImage .playBtn {
+  color: white;
+  background-color: #151515;
+  border-radius: 50%;
+  border: none;
+  padding: 20px;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+header .middle .video .videoImage .playBtn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+header .middle .video .videoImage .expBtn {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+header .middle .video .video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+header .middle .video .video-popup .hiddenVideo {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+}
+header .middle .video .video-popup .hiddenVideo iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+header .middle .video .video-popup .hiddenVideo .closeBtn {
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+header .middle .video .video-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+main {
+  background-color: white;
+}
+main .container {
+  background-color: white;
+  padding: 200px;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

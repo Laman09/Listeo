@@ -16,18 +16,54 @@ document.getElementById('rateLink').addEventListener('click', function(e) {
     window.open(href, '_blank');
 });
 
-// window.onload = () => {
-//     const headings = document.querySelectorAll('h1');
+const headings = document.querySelectorAll('.heading');
+function nextHeading() {
+    const active = document.querySelector('.heading.active');
+    const next = active.nextElementSibling || headings[0];
+    active.classList.remove('active');
+    next.classList.add('active');
+}
+setInterval(nextHeading, 3000);
 
-//     setTimeout(() => {
-//       headings[0].classList.add('show');
-//     }, 1000);
-  
-//     setTimeout(() => {
-//       headings[1].classList.add('show');
-//     }, 2500);
-  
-//     setTimeout(() => {
-//       headings[2].classList.add('show');
-//     }, 4000);
-// };
+function showVideo() {
+    const playButton = document.getElementById("playVideo");
+    const video = document.getElementById("youtubeVideo");
+    
+    playVideo.classList.add("active");
+    video.src += "&autoplay=1";
+}
+function closeVideo() {
+    const playVideo = document.getElementById("playVideo");
+    const video = document.getElementById("youtubeVideo");
+
+    playVideo.classList.remove("active");
+    video.src = video.src.replace("&autoplay=1", "");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.querySelector(".playBtn");
+    const closeButton = document.querySelector(".closeBtn");
+    const videoPopup = document.querySelector(".video-popup");
+    const youtubeVideo = document.getElementById("youtubeVideo");
+
+    playButton.addEventListener("click", () => {
+        videoPopup.classList.add("active");
+    });
+
+    closeButton.addEventListener("click", () => {
+        videoPopup.classList.remove("active");
+        youtubeVideo.src = youtubeVideo.src; 
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
