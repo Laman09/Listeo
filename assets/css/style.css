@@ -402,6 +402,28 @@ header .middle .video .video-popup.active {
   opacity: 1;
 }
 
+nav.vertical {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  transition: 0.4s;
+  z-index: 100;
+}
+nav.vertical .enabled {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-50%);
+}
+nav.vertical ul {
+  padding: 0;
+}
+nav.vertical ul li {
+  text-align: right;
+  list-style: none;
+  margin-bottom: 1px;
+}
+
 main {
   text-align: center;
   padding: 40px;
@@ -561,6 +583,8 @@ main .service {
   gap: 30px;
   width: 100%;
   padding-top: 20px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
 }
 main .service .leftCard {
   display: flex;
