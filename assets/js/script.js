@@ -110,6 +110,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//service cards transition on scroll
+document.addEventListener("scroll", function () {
+    let serviceCards = document.querySelector(".service");
+    let position = serviceCards.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+    if (position < windowHeight - 50) {
+        serviceCards.classList.add("show");
+    }
+});
+
 //card click: new tab
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".card");

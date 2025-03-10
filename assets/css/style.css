@@ -688,23 +688,11 @@ main .service {
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
   transform: translateY(100px);
-  animation: slideUp 0.5s ease-out forwards;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-main .service :first-child {
-  animation-delay: 0.6s;
-}
-main .service :last-child {
-  animation-delay: 0.6s;
-}
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+main .service.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 main .service .leftCard {
   display: flex;
@@ -1027,7 +1015,7 @@ main .rental .leftRent span.second {
   display: block;
   color: #666;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 main .rental .leftRent span.second b {
   color: #181818;
@@ -1047,9 +1035,9 @@ main .rental .leftRent .chekings ul li span {
   font-weight: 400;
 }
 main .rental .leftRent .chekings ul li svg {
-  color: #f8d6dc;
-  width: 40px;
-  height: 40px;
+  color: #fadfe4;
+  width: 32px;
+  height: 32px;
 }
 main .rental .image img {
   width: 600px;

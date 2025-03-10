@@ -715,18 +715,10 @@ main {
         padding-bottom: 50px;
         border-bottom: 1px solid #d0cdcdc0;
         transform: translateY(100px);
-        animation: slideUp 0.5s ease-out forwards;
-        :first-child { animation-delay: 0.6s; }
-        :last-child { animation-delay: 0.6s; }
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        &.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         .leftCard{
             display: flex;
@@ -1049,7 +1041,7 @@ main {
                 display: block;
                 color: #666;
                 font-size: 16px;
-                margin-bottom: 10px;
+                margin-bottom: 50px;
                 b{
                     color: #181818;
                 }
@@ -1063,15 +1055,14 @@ main {
                         color: #333;
                         transition: all 0.3sease-out;
                         font-size: 16px;
-                        // font-weight: 300;
                         span{
                             color: #777;
                             font-weight: 400;
                         }
                         svg{
-                            color: #f8d6dc;
-                            width: 40px;
-                            height: 40px;
+                            color: #fadfe4;
+                            width: 32px;
+                            height: 32px;
                         }
                     }
                 }
