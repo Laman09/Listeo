@@ -26,6 +26,20 @@ document.getElementById('buyLink').addEventListener('click', function(e) {
     window.open(href, '_blank');
 });
 
+//rate span link: new tab
+document.getElementById('spanRate').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//image link: new tab
+document.getElementById('imgLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
 //headings visibility
 const headings = document.querySelectorAll('.heading');
 function nextHeading() {

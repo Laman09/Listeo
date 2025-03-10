@@ -886,19 +886,28 @@ main .booking .qrCode img {
   cursor: pointer;
 }
 main .booking .clickQR {
-  width: 70%;
-  height: 40%;
   border-radius: 6px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 65%;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 main .booking .clickQR .qrHeading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  z-index: 3;
+  position: fixed;
   width: 100%;
+  z-index: 3;
   background-color: rgb(244, 244, 244);
-  padding: 30px 60px 20px 38px;
+  padding: 30px 38px 20px 38px;
   border-radius: 4px 4px 0 0;
   font-size: 28px;
   font-weight: 700;
@@ -909,7 +918,7 @@ main .booking .clickQR .qrHeading button {
   margin-bottom: 10px;
 }
 main .booking .clickQR .texts {
-  overflow-y: scroll;
+  padding-top: 100px;
 }
 main .booking .clickQR .texts p {
   font-size: 16px;
@@ -936,7 +945,115 @@ main .booking .clickQR .texts p.third {
   background-color: rgba(22, 185, 77, 0.1215686275);
 }
 main .booking .clickQR .texts img {
-  width: 300px;
+  width: 600px;
+}
+main .links {
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+main .links nav.navLink {
+  width: 100%;
+  padding: 40px;
+  position: fixed;
+  z-index: 100;
+}
+main .links nav.navLink ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+main .links nav.navLink ul li {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+main .links nav.navLink ul li:not(:last-child) {
+  border-right: 1px solid rgba(208, 205, 205, 0.7529411765);
+  padding-right: 120px;
+}
+main .links nav.navLink ul li a {
+  text-decoration: none;
+  color: #181818;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+main .links nav.navLink ul li a svg {
+  color: #f91942;
+  margin-right: 5px;
+}
+main .links nav.navLink ul li a:hover {
+  color: #f91942;
+}
+main .links nav.navLink ul li a a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f91942;
+  z-index: 100;
+}
+main .rental {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+main .rental .leftRent {
+  text-align: start;
+}
+main .rental .leftRent p {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+main .rental .leftRent span.first {
+  display: inline-block;
+  color: #f91942;
+  background-color: #ffedf0;
+  margin: -6px 0px 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+main .rental .leftRent span.second {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+main .rental .leftRent span.second b {
+  color: #181818;
+}
+main .rental .leftRent .chekings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .rental .leftRent .chekings ul li {
+  color: #333;
+  transition: all 0.3sease-out;
+  font-size: 16px;
+}
+main .rental .leftRent .chekings ul li span {
+  color: #777;
+  font-weight: 400;
+}
+main .rental .leftRent .chekings ul li svg {
+  color: #f8d6dc;
+  width: 40px;
+  height: 40px;
+}
+main .rental .image img {
+  width: 600px;
+  height: 550px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -908,18 +908,27 @@ main {
             }
         }
         .clickQR{
-            width: 70%;
-            height: 40%;
             border-radius: 6px;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 45%;
+            height: 65%;
+            text-align: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow-y: scroll;
             .qrHeading{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                position: sticky;
-                z-index: 3;
+                position: fixed;
                 width: 100%;
+                z-index: 3;
                 background-color: rgb(244, 244, 244);
-                padding: 30px 60px 20px 38px;
+                padding: 30px 38px 20px 38px;
                 border-radius: 4px 4px 0 0;
                 font-size: 28px;
                 font-weight: 700;
@@ -930,7 +939,7 @@ main {
                 }
             }
             .texts{
-                overflow-y: scroll;
+                padding-top: 100px;
                 p{
                     font-size: 16px;
                     text-align: start;
@@ -956,8 +965,122 @@ main {
                     background-color: #16b94d1f;
                 }
                 img{
-                    width: 300px;
+                    width: 600px;
                 }
+            }
+        }
+    }
+    .links{
+        border-bottom: 1px solid #d0cdcdc0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: auto;
+        nav.navLink{
+            width: 100%;
+            padding: 40px;
+            position: fixed;
+            z-index: 100;
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 40px;
+                padding: 0;
+                margin: 0;
+                li{
+                    font-size: 20px;
+                    font-weight: 500;
+                    position: relative;
+                    
+                    &:not(:last-child) {
+                        border-right: 1px solid #d0cdcdc0;
+                        padding-right: 120px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #181818;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        transition: color 0.3s ease;
+                        svg{
+                            color: #f91942;
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            color: #f91942;
+                        }
+                        a.active::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #f91942;
+                            z-index: 100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rental{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        .leftRent{
+            text-align: start;
+            p{
+                font-size: 30px;
+                color: #222;
+                margin-bottom: 18px;
+                font-weight: 700;
+            }
+            span.first{
+                display: inline-block;
+                color: #f91942;
+                background-color: #ffedf0;
+                margin: -6px 0px 20px;
+                padding: 5px 10px;
+                border-radius: 4px;
+            }
+            span.second{
+                display: block;
+                color: #666;
+                font-size: 16px;
+                margin-bottom: 10px;
+                b{
+                    color: #181818;
+                }
+            }
+            .chekings{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        color: #333;
+                        transition: all 0.3sease-out;
+                        font-size: 16px;
+                        // font-weight: 300;
+                        span{
+                            color: #777;
+                            font-weight: 400;
+                        }
+                        svg{
+                            color: #f8d6dc;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .image{
+            img{
+                width: 600px;
+                height: 550px;
             }
         }
     }
