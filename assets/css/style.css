@@ -38,7 +38,7 @@ header .allNav nav {
   display: flex;
   justify-content: space-around;
   position: fixed;
-  z-index: 3;
+  z-index: 55;
   width: 100%;
   align-items: center;
   padding: 30px;
@@ -536,7 +536,7 @@ nav.vertical ul li {
 
 main {
   text-align: center;
-  padding: 40px;
+  padding-top: 40px;
   background-color: white;
 }
 main .wrapper {
@@ -552,7 +552,7 @@ main .wrapper .container {
   display: flex;
   position: absolute;
   bottom: -100px;
-  left: 70px;
+  left: 120px;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -879,6 +879,7 @@ main .booking .clickQR {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 3;
   transform: translate(-50%, -50%);
   width: 45%;
   height: 65%;
@@ -893,7 +894,7 @@ main .booking .clickQR .qrHeading {
   align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 10;
   background-color: rgb(244, 244, 244);
   padding: 30px 38px 20px 38px;
   border-radius: 4px 4px 0 0;
@@ -936,15 +937,14 @@ main .booking .clickQR .texts img {
   width: 600px;
 }
 main .links {
-  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: auto;
+  width: 100%;
+  position: relative;
 }
 main .links nav.navLink {
   width: 100%;
   padding: 40px;
-  position: fixed;
-  z-index: 100;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 main .links nav.navLink ul {
   list-style: none;
@@ -989,21 +989,21 @@ main .links nav.navLink ul li a a.active::after {
   background-color: #f91942;
   z-index: 100;
 }
-main .rental {
+main .links .rental {
   display: flex;
   justify-content: space-around;
   padding: 50px;
 }
-main .rental .leftRent {
+main .links .rental .leftRent {
   text-align: start;
 }
-main .rental .leftRent p {
+main .links .rental .leftRent p {
   font-size: 30px;
   color: #222;
   margin-bottom: 18px;
   font-weight: 700;
 }
-main .rental .leftRent span.first {
+main .links .rental .leftRent span.first {
   display: inline-block;
   color: #f91942;
   background-color: #ffedf0;
@@ -1011,35 +1011,35 @@ main .rental .leftRent span.first {
   padding: 5px 10px;
   border-radius: 4px;
 }
-main .rental .leftRent span.second {
+main .links .rental .leftRent span.second {
   display: block;
   color: #666;
   font-size: 16px;
   margin-bottom: 50px;
 }
-main .rental .leftRent span.second b {
+main .links .rental .leftRent span.second b {
   color: #181818;
 }
-main .rental .leftRent .chekings ul {
+main .links .rental .leftRent .chekings ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-main .rental .leftRent .chekings ul li {
+main .links .rental .leftRent .chekings ul li {
   color: #333;
   transition: all 0.3sease-out;
   font-size: 16px;
 }
-main .rental .leftRent .chekings ul li span {
+main .links .rental .leftRent .chekings ul li span {
   color: #777;
   font-weight: 400;
 }
-main .rental .leftRent .chekings ul li svg {
+main .links .rental .leftRent .chekings ul li svg {
   color: #fadfe4;
   width: 32px;
   height: 32px;
 }
-main .rental .image img {
+main .links .rental .image img {
   width: 600px;
   height: 550px;
 }
