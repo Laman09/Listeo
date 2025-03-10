@@ -153,7 +153,11 @@ header .allNav nav .rightSide ul .dropdown .dropdown-menu li a:hover {
 header .allNav nav .rightSide ul .dropdown:hover .dropdown-menu {
   display: block;
 }
-header .allNav nav .rightSide ul .button button {
+header .allNav nav .rightSide ul .btn-flip {
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
   border: none;
   background-color: #f91942;
   color: white;
@@ -162,16 +166,43 @@ header .allNav nav .rightSide ul .button button {
   padding: 9px 18px;
   font-weight: 500px;
 }
-header .allNav nav .rightSide ul .button button span {
-  display: inline-block;
-  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+header .allNav nav .rightSide ul .btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
 }
-header .allNav nav .rightSide ul .button button:hover {
+header .allNav nav .rightSide ul .btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+header .allNav nav .rightSide ul .btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  border: none;
   background-color: white;
   color: #222;
+  border-radius: 7px;
+  font-size: 15px;
+  padding: 9px 18px;
+  font-weight: 500px;
+  content: "Buy Now";
+  transform: translateY(-50%) rotateX(90deg);
 }
-header .allNav nav .rightSide ul .button button:hover span {
-  transform: rotateX(360deg);
+header .allNav nav .rightSide ul .btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+  background: #f91942;
+  content: "Buy Now";
+  transform: translateY(0) rotateX(0);
 }
 header .allNav nav.scrolled {
   transition: background 0.3s linear;
@@ -220,11 +251,11 @@ header .allNav nav.scrolled .rightSide ul .dropdown .dropdown-menu li a:hover {
   color: #f91942;
   background-color: #f7efef;
 }
-header .allNav nav.scrolled .rightSide ul .button button {
+header .allNav nav.scrolled .rightSide ul .btn-flip button {
   background-color: #181818;
   color: white;
 }
-header .allNav nav.scrolled .rightSide ul .button button:hover {
+header .allNav nav.scrolled .rightSide ul .btn-flip button:hover {
   background-color: #f91942;
 }
 header .middle {
@@ -292,16 +323,18 @@ header .middle .logo .buttons button {
   padding: 12px 20px;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-header .middle .logo .buttons button span {
+header .middle .logo .buttons button a {
   display: inline-block;
+  color: white;
+  background-color: transparent;
   transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 header .middle .logo .buttons button:hover {
   background-color: white;
-  color: #222;
 }
-header .middle .logo .buttons button:hover span {
+header .middle .logo .buttons button:hover a {
   transform: rotateX(360deg);
+  color: #222;
 }
 header .middle .logo .buttons :first-child {
   margin-right: 10px;
@@ -577,6 +610,24 @@ main .service {
   padding-top: 20px;
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  transform: translateY(100px);
+  animation: slideUp 0.5s ease-out forwards;
+}
+main .service :first-child {
+  animation-delay: 0.6s;
+}
+main .service :last-child {
+  animation-delay: 0.6s;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main .service .leftCard {
   display: flex;

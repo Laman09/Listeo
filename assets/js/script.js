@@ -12,8 +12,15 @@ document.getElementById('buttonLink').addEventListener('click', function(e) {
     window.open(href, '_blank');
 });
 
-//rating click:new tab
+//rating click: new tab
 document.getElementById('rateLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//button buy: new tab
+document.getElementById('buyLink').addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
     window.open(href, '_blank');
