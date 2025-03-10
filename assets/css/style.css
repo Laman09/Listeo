@@ -200,7 +200,6 @@ header .allNav nav .rightSide ul .btn-flip:before {
   display: block;
   transition: 0.3s;
   position: relative;
-  background: #f91942;
   content: "Buy Now";
   transform: translateY(0) rotateX(0);
 }
@@ -251,12 +250,17 @@ header .allNav nav.scrolled .rightSide ul .dropdown .dropdown-menu li a:hover {
   color: #f91942;
   background-color: #f7efef;
 }
-header .allNav nav.scrolled .rightSide ul .btn-flip button {
+header .allNav nav.scrolled .rightSide ul .btn-flip {
   background-color: #181818;
   color: white;
 }
-header .allNav nav.scrolled .rightSide ul .btn-flip button:hover {
+header .allNav nav.scrolled .rightSide ul .btn-flip:hover:after {
   background-color: #f91942;
+  color: white;
+}
+header .allNav nav.scrolled .rightSide ul .btn-flip:hover:before {
+  background-color: #181818;
+  color: white;
 }
 header .middle {
   display: flex;
@@ -313,38 +317,111 @@ header .middle .logo p.three b {
 header .middle .logo .buttons {
   padding-top: 30px;
 }
-header .middle .logo .buttons button {
+header .middle .logo .buttons a {
+  background-color: transparent;
+}
+header .middle .logo .buttons .btn-flip {
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
   border: none;
   background-color: #f91942;
   color: white;
   border-radius: 7px;
   font-size: 15px;
-  font-weight: 500;
-  padding: 12px 20px;
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  padding: 9px 18px;
+  font-weight: 500px;
 }
-header .middle .logo .buttons button a {
-  display: inline-block;
-  color: white;
-  background-color: transparent;
-  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+header .middle .logo .buttons .btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
 }
-header .middle .logo .buttons button:hover {
+header .middle .logo .buttons .btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+header .middle .logo .buttons .btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  border: none;
   background-color: white;
-}
-header .middle .logo .buttons button:hover a {
-  transform: rotateX(360deg);
   color: #222;
+  border-radius: 7px;
+  font-size: 15px;
+  padding: 9px 18px;
+  font-weight: 500px;
+  content: "Buy Now - $79";
+  transform: translateY(-50%) rotateX(90deg);
 }
-header .middle .logo .buttons :first-child {
-  margin-right: 10px;
+header .middle .logo .buttons .btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+  background: #f91942;
+  content: "Buy Now - $79";
+  transform: translateY(0) rotateX(0);
 }
-header .middle .logo .buttons button.demo {
+header .middle .logo .buttons .btn-flip-2 {
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
   background-color: transparent;
+  color: #222;
+  border-radius: 7px;
   border: 2px solid white;
+  font-size: 15px;
+  padding: 9px 18px;
+  font-weight: 500px;
 }
-header .middle .logo .buttons button.demo:hover {
+header .middle .logo .buttons .btn-flip-2:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+header .middle .logo .buttons .btn-flip-2:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+header .middle .logo .buttons .btn-flip-2:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
   background-color: white;
+  color: #222;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 9px 18px;
+  font-weight: 500px;
+  content: "Browse Demos";
+  transform: translateY(-50%) rotateX(90deg);
+}
+header .middle .logo .buttons .btn-flip-2:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  display: block;
+  border-color: white;
+  transition: 0.3s;
+  position: relative;
+  background-color: transparent;
+  content: "Browse Demos";
+  transform: translateY(0) rotateX(0);
 }
 header .middle .logo .aprovedSides {
   display: flex;
@@ -706,6 +783,8 @@ main .booking {
   display: flex;
   justify-content: space-around;
   padding-top: 70px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
 }
 main .booking .keySystem {
   text-align: start;
@@ -805,6 +884,59 @@ main .booking .qrCode img {
   width: 90%;
   height: 90%;
   cursor: pointer;
+}
+main .booking .clickQR {
+  width: 70%;
+  height: 40%;
+  border-radius: 6px;
+}
+main .booking .clickQR .qrHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 3;
+  width: 100%;
+  background-color: rgb(244, 244, 244);
+  padding: 30px 60px 20px 38px;
+  border-radius: 4px 4px 0 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+main .booking .clickQR .qrHeading button {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+main .booking .clickQR .texts {
+  overflow-y: scroll;
+}
+main .booking .clickQR .texts p {
+  font-size: 16px;
+  text-align: start;
+  color: #777;
+}
+main .booking .clickQR .texts p b {
+  color: #181818;
+}
+main .booking .clickQR .texts p.first {
+  padding: 38px 0 0 38px;
+}
+main .booking .clickQR .texts p.second {
+  padding: 0 0 10px 38px;
+}
+main .booking .clickQR .texts p.third {
+  text-align: center;
+  color: #219d4b;
+  margin: 0 0 20px 38px;
+  padding: 7px;
+  width: 600px;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: rgba(22, 185, 77, 0.1215686275);
+}
+main .booking .clickQR .texts img {
+  width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

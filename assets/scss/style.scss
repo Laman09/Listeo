@@ -155,28 +155,6 @@ header{
                             display: block;
                         }
                     }
-                    // .button{
-                    //     button{
-                    //         border: none;
-                    //         background-color: #f91942;
-                    //         color: white;
-                    //         border-radius: 7px;
-                    //         font-size: 15px;
-                    //         padding: 9px 18px;
-                    //         font-weight: 500px;
-                    //         span {
-                    //             display: inline-block;
-                    //             transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-                    //         }
-                    //         &:hover {
-                    //             background-color: white;
-                    //             color: #222;
-                    //             span {
-                    //                 transform: rotateX(360deg);
-                    //             }
-                    //         }
-                    //     }
-                    // }
                     .btn-flip{
                         opacity: 1;
                         position: relative;
@@ -189,20 +167,16 @@ header{
                         font-size: 15px;
                         padding: 9px 18px;
                         font-weight: 500px;
-                        
                         &:hover{
-                          
-                          &:after{
-                            opacity: 1;
-                            transform: translateY(0) rotateX(0);
-                          }
-                          
-                          &:before{
-                            opacity: 0;
-                            transform: translateY(50%) rotateX(90deg);
-                          }
+                            &:after{
+                              opacity: 1;
+                              transform: translateY(0) rotateX(0);
+                            }
+                            &:before{
+                              opacity: 0;
+                              transform: translateY(50%) rotateX(90deg);
+                            }
                         }
-                        
                         &:after{
                             top: 0;
                             left: 0;
@@ -220,8 +194,7 @@ header{
                             font-weight: 500px;
                             content: 'Buy Now';
                             transform: translateY(-50%) rotateX(90deg);
-                        }
-                        
+                        } 
                         &:before{
                             top: 0;
                             left: 0;
@@ -230,11 +203,10 @@ header{
                             display: block;
                             transition: 0.3s;
                             position: relative;
-                            background: #f91942;
                             content: 'Buy Now';
                             transform: translateY(0) rotateX(0);
                         }
-                      }
+                    }
                 }
             }
         }
@@ -301,11 +273,16 @@ header{
                         }
                     }
                     .btn-flip{
-                        button{
-                            background-color: #181818;
-                            color: white;
-                            &:hover{
+                        background-color: #181818;
+                        color: white;
+                        &:hover{
+                            &:after{
                                 background-color: #f91942;
+                                color: white;
+                            }
+                            &:before{
+                                background-color: #181818;
+                                color: white;
                             }
                         }
                     }
@@ -365,37 +342,115 @@ header{
             }
             .buttons{
                 padding-top: 30px;
-                button{
+                a{
+                    background-color: transparent;
+                }
+                .btn-flip{
+                    opacity: 1;
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
                     border: none;
                     background-color: #f91942;
                     color: white;
                     border-radius: 7px;
                     font-size: 15px;
-                    font-weight: 500;
-                    padding: 12px 20px;
-                    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-                    a{
-                        display: inline-block;
-                        color: white;
-                        background-color: transparent;
-                        transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-                    }
-                    &:hover {
-                        background-color: white;
-                        a{
-                            transform: rotateX(360deg);
-                            color: #222;
+                    padding: 9px 18px;
+                    font-weight: 500px;
+                    
+                    &:hover{
+                        &:after{
+                            opacity: 1;
+                            transform: translateY(0) rotateX(0);
+                        }
+                        &:before{
+                            opacity: 0;
+                            transform: translateY(50%) rotateX(90deg);
                         }
                     }
-                }
-                :first-child{
-                    margin-right: 10px;
-                }
-                button.demo{
-                    background-color: transparent;
-                    border: 2px solid white;
-                    &:hover{
+                    &:after{
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        width: 100%;
+                        display: block;
+                        transition: 0.3s;
+                        position: absolute;
+                        border: none;
                         background-color: white;
+                        color: #222;
+                        border-radius: 7px;
+                        font-size: 15px;
+                        padding: 9px 18px;
+                        font-weight: 500px;
+                        content: 'Buy Now - $79';
+                        transform: translateY(-50%) rotateX(90deg);
+                    }
+                    &:before{
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                        color: white;
+                        display: block;
+                        transition: 0.3s;
+                        position: relative;
+                        background: #f91942;
+                        content: 'Buy Now - $79';
+                        transform: translateY(0) rotateX(0);
+                    }
+                }
+                .btn-flip-2{
+                    opacity: 1;
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    border: none;
+                    background-color: transparent;
+                    color: #222;
+                    border-radius: 7px;
+                    border: 2px solid white;
+                    font-size: 15px;
+                    padding: 9px 18px;
+                    font-weight: 500px;
+                    &:hover{
+                        &:after{
+                            opacity: 1;
+                            transform: translateY(0) rotateX(0);
+                        }
+                        &:before{
+                            opacity: 0;
+                            transform: translateY(50%) rotateX(90deg);
+                        }
+                    }
+                    &:after{
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        width: 100%;
+                        display: block;
+                        transition: 0.3s;
+                        position: absolute;
+                        background-color: white;
+                        color: #222;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 9px 18px;
+                        font-weight: 500px;
+                        content: 'Browse Demos';
+                        transform: translateY(-50%) rotateX(90deg);
+                    }
+                    &:before{
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                        color: white;
+                        display: block;
+                        border-color: white;
+                        transition: 0.3s;
+                        position: relative;
+                        background-color: transparent;
+                        content: 'Browse Demos';
+                        transform: translateY(0) rotateX(0);
                     }
                 }
             }
@@ -751,6 +806,8 @@ main {
         display: flex;
         justify-content: space-around;
         padding-top: 70px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #d0cdcdc0;
         .keySystem{
             text-align: start;
             .highlight2{
@@ -848,6 +905,59 @@ main {
                 width: 90%;
                 height: 90%;
                 cursor: pointer;
+            }
+        }
+        .clickQR{
+            width: 70%;
+            height: 40%;
+            border-radius: 6px;
+            .qrHeading{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                z-index: 3;
+                width: 100%;
+                background-color: rgb(244, 244, 244);
+                padding: 30px 60px 20px 38px;
+                border-radius: 4px 4px 0 0;
+                font-size: 28px;
+                font-weight: 700;
+                button{
+                    border: none;
+                    background-color: transparent;
+                    margin-bottom: 10px;
+                }
+            }
+            .texts{
+                overflow-y: scroll;
+                p{
+                    font-size: 16px;
+                    text-align: start;
+                    color: #777;
+                    b{
+                        color: #181818;
+                    } 
+                }
+                p.first{
+                    padding: 38px 0 0 38px;
+                }
+                p.second{
+                    padding: 0 0 10px 38px;
+                }
+                p.third{
+                    text-align: center;
+                    color: #219d4b;
+                    margin: 0 0 20px 38px;
+                    padding: 7px;
+                    width: 600px;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    background-color: #16b94d1f;
+                }
+                img{
+                    width: 300px;
+                }
             }
         }
     }

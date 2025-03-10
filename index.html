@@ -102,16 +102,14 @@
                 </p>
                 <div class="buttons">
                     <form action="">
-                        <button type="submit">
-                            <a href="https://1.envato.market/QOYRr3" id="buyLink">
-                                Buy Now - $79
-                            </a>
-                        </button>
-                        <button type="submit" class="demo">
-                            <a href="#themes">
-                                Browse Demos
-                            </a>
-                        </button>
+                        <a href="https://1.envato.market/QOYRr3" id="buyLink">
+                            <button type="submit" class="btn-flip">
+                            </button>
+                        </a>
+                        <a href="#themes">
+                            <button type="submit" class="btn-flip-2">
+                            </button>
+                        </a>
                     </form>
                 </div>
                 <div class="aprovedSides">
@@ -494,10 +492,32 @@
                         </button>
                     </div>
                 </div>
-                <div class="qrCode">
+                <div class="qrCode" onclick="openPopup()">
                     <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/QR-CODE-BTN.svg" alt="qrCode">
-                    <div class="clickQR">
-                        
+                </div>
+                <div class="clickQR" id="popup">
+                    <div class="qrHeading">
+                        <p>QR Code Verification System</p>
+                        <button type="submit" onclick="closePopup()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m12 12.708l-5.246 5.246q-.14.14-.344.15t-.364-.15t-.16-.354t.16-.354L11.292 12L6.046 6.754q-.14-.14-.15-.344t.15-.364t.354-.16t.354.16L12 11.292l5.246-5.246q.14-.14.345-.15q.203-.01.363.15t.16.354t-.16.354L12.708 12l5.246 5.246q.14.14.15.345q.01.203-.15.363t-.354.16t-.354-.16z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="texts">
+                        <p class="first">
+                            Allow <b>listing owners to verify visitor tickets using their smartphones</b>. By scanning<br>
+                            a QR code, owners can <b>quickly confirm ticket authenticity directly</b> from their<br>
+                            dashboard, <b>making event entry more efficient</b>.
+                        </p>
+                        <p class="second">
+                            If a customer selects <b>cash payment, the ticket will show as ‘unpaid’ until settled</b>,<br>
+                            allowing owners to track payment status with ease.
+                        </p>
+                        <p class="third">
+                            QR verification system works with all booking methods
+                        </p>
+                        <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/tickett.png" alt="ticket">
                     </div>
                 </div>
             </div>
