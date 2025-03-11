@@ -33,8 +33,15 @@ document.getElementById('spanRate').addEventListener('click', function(e) {
     window.open(href, '_blank');
 });
 
-//image link: new tab
-document.getElementById('imgLink').addEventListener('click', function(e) {
+//rentImg link: new tab
+document.getElementById('rentalLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//serviceImg link: new tab
+document.getElementById('serviceLink').addEventListener('click', function(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
     window.open(href, '_blank');
@@ -95,6 +102,21 @@ function buttonClose() {
 
     playVideo.classList.remove("active");
     video.src = video.src.replace("&autoplay=1", "");
+}
+
+//service video opening
+function btnPlay() {
+    const playVideo = document.getElementById("serviceVideo");
+    const video = document.getElementById("youtubeService");
+
+    playVideo.classList.add("active");
+    video.src = video.src.replace("&autoplay=1", "");
+}
+function btnClose() {
+    const playVideo = document.getElementById("serviceVideo");
+    const video = document.getElementById("youtubeService");
+
+    playVideo.classList.remove("active");
 }
 
 //navbar scrolling

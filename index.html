@@ -645,10 +645,80 @@
                     </div>
                     <div class="image">
                         <a 
-                            id="imgLink"
+                            id="rentalLink"
                             href="https://listeo.pro/listing/sunny-apartment/">
                             <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/x2-1-2048x1831.png" alt="rental">
                         </a>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div class="services">
+                    <div class="image">
+                        <a 
+                            id="serviceLink"
+                            href="https://listeo.pro/listing/georges-barber-shop/">
+                            <img src="https://purethemes.net/listeo/wp-content/uploads/sites/4/2024/10/booking2.png" alt="service">
+                        </a>
+                    </div>
+                    <div class="rightService">
+                        <p>Services</p>
+                        <span class="first">e.g. restaurants, barbers, doctors</span>
+                        <span class="second">
+                            <b>Users can reserve spots</b> at e.g. restaurants 🍔, barbers 🧔, etc. They can <b>choose <br>
+                                date and time slot or specific hour</b> ⏲️ if time slots are non set - in this case time <br>
+                                picker will be displayed in the booking widget instead of time slots and guests will be <br>
+                                able to make reservations only in opening hours range.
+                        </span>
+                        <span class="third">Everything from rental method plus:</span>
+                        <div class="chekings">
+                            <ul>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd" d="M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18m-.232-5.36l5-6l-1.536-1.28l-4.3 5.159l-2.225-2.226l-1.414 1.414l3 3l.774.774z" clip-rule="evenodd" />
+                                    </svg>
+                                    Availability Calendar
+                                    <span> (single day)</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd" d="M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18m-.232-5.36l5-6l-1.536-1.28l-4.3 5.159l-2.225-2.226l-1.414 1.414l3 3l.774.774z" clip-rule="evenodd" />
+                                    </svg>
+                                    Time Slots or Time Picker
+                                </li>
+                            </ul>
+                            <button 
+                                type="submit"
+                                class="playBtn"
+                                onclick="btnPlay()">
+                                Time Slots Video
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M13.293 7.293a1 1 0 0 0 0 1.414L15.586 11H8a1 1 0 0 0 0 2h7.586l-2.293 2.293a.999.999 0 1 0 1.414 1.414L19.414 12l-4.707-4.707a1 1 0 0 0-1.414 0" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-popup" id="serviceVideo">
+                        <div class="hiddenService">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                id="youtubeService"
+                                src="https://www.youtube.com/embed/hDhUbqHlx84?si=Sq-hwhA_McyROWBI" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen></iframe>
+                            <button
+                                type="submit"
+                                class="closeBtn"
+                                onclick="btnClose()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>

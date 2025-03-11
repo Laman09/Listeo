@@ -993,6 +993,7 @@ main .links .rental {
   display: flex;
   justify-content: space-around;
   padding: 50px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
 }
 main .links .rental .leftRent {
   text-align: start;
@@ -1001,7 +1002,7 @@ main .links .rental .leftRent p {
   font-size: 30px;
   color: #222;
   margin-bottom: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 main .links .rental .leftRent span.first {
   display: inline-block;
@@ -1042,6 +1043,126 @@ main .links .rental .leftRent .chekings ul li svg {
 main .links .rental .image img {
   width: 600px;
   height: 550px;
+}
+main .links .services {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+}
+main .links .services img {
+  width: 650px;
+  height: 450px;
+}
+main .links .services .rightService {
+  text-align: start;
+  padding-left: 30px;
+}
+main .links .services .rightService p {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+main .links .services .rightService span.first {
+  display: inline-block;
+  color: #f91942;
+  background-color: #ffedf0;
+  margin: -6px 0px 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+main .links .services .rightService span.second {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+main .links .services .rightService span.second b {
+  color: #181818;
+}
+main .links .services .rightService span.third {
+  color: white;
+  background-color: #2f2f2f;
+  margin: -5px 0 0;
+  padding: 8px 14px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+main .links .services .rightService button {
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #ffedf0;
+  color: #f91942;
+  margin-top: 10px;
+}
+main .links .services .rightService button:hover {
+  background-color: #f6d6db;
+  transition: 0.3s;
+}
+main .links .services .rightService .chekings {
+  margin-top: 20px;
+}
+main .links .services .rightService .chekings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .links .services .rightService .chekings ul li {
+  color: #333;
+  transition: all 0.3sease-out;
+  font-size: 16px;
+}
+main .links .services .rightService .chekings ul li span {
+  color: #777;
+  font-weight: 400;
+}
+main .links .services .rightService .chekings ul li svg {
+  color: #fadfe4;
+  width: 32px;
+  height: 32px;
+}
+main .links .services .service-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+main .links .services .service-popup .hiddenService {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+}
+main .links .services .service-popup .hiddenService iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+main .links .services .service-popup .hiddenService .closeBtn {
+  position: absolute;
+  top: -35px;
+  right: -50px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+main .links .services .service-popup.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
