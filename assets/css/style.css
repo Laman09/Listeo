@@ -678,7 +678,7 @@ main .demos .cards .card .browseImg img {
   height: auto;
   object-fit: cover;
 }
-main .service {
+main .serviceCards {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -690,11 +690,11 @@ main .service {
   transform: translateY(100px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-main .service.show {
+main .serviceCards.show {
   opacity: 1;
   transform: translateY(0);
 }
-main .service .leftCard {
+main .serviceCards .leftCard {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -704,21 +704,21 @@ main .service .leftCard {
   text-align: start;
   width: 40%;
 }
-main .service .leftCard p {
+main .serviceCards .leftCard p {
   color: #2a4d85;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
 }
-main .service .leftCard p span {
+main .serviceCards .leftCard p span {
   color: #415b9e;
   font-weight: 700;
 }
-main .service .leftCard img {
+main .serviceCards .leftCard img {
   width: 200px;
   height: 130px;
 }
-main .service .rightCard {
+main .serviceCards .rightCard {
   background-color: white;
   border: 1px solid #ddd;
   text-align: start;
@@ -728,12 +728,12 @@ main .service .rightCard {
   padding: 25px;
   border-radius: 10px;
 }
-main .service .rightCard .serviceBtn {
+main .serviceCards .rightCard .serviceBtn {
   text-align: start;
   display: flex;
   position: relative;
 }
-main .service .rightCard .serviceBtn button {
+main .serviceCards .rightCard .serviceBtn button {
   background-color: #222;
   color: white;
   padding: 8px 16px;
@@ -745,26 +745,26 @@ main .service .rightCard .serviceBtn button {
   border-radius: 6px;
   transition: 0.35s;
 }
-main .service .rightCard .serviceBtn a {
+main .serviceCards .rightCard .serviceBtn a {
   text-decoration: none;
 }
-main .service .rightCard .serviceBtn p {
+main .serviceCards .rightCard .serviceBtn p {
   color: #777;
 }
-main .service .rightCard .serviceBtn p b {
+main .serviceCards .rightCard .serviceBtn p b {
   color: #222;
 }
-main .service .rightCard .serviceBtn img {
+main .serviceCards .rightCard .serviceBtn img {
   position: absolute;
   bottom: -5px;
   right: -250px;
   width: 150px;
   height: 120px;
 }
-main .service .rightCard:hover {
+main .serviceCards .rightCard:hover {
   cursor: pointer;
 }
-main .service .rightCard:hover button {
+main .serviceCards .rightCard:hover button {
   background-color: #f91942;
 }
 main .booking {
@@ -942,9 +942,11 @@ main .links {
 }
 main .links nav.navLink {
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
 }
 main .links nav.navLink ul {
   list-style: none;
@@ -994,6 +996,7 @@ main .links .rental {
   justify-content: space-around;
   padding: 50px;
   border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  background-color: rgba(249, 248, 248, 0.7529411765);
 }
 main .links .rental .leftRent {
   text-align: start;
@@ -1049,6 +1052,7 @@ main .links .services {
   justify-content: space-around;
   padding: 50px;
   border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  background-color: rgba(249, 248, 248, 0.7529411765);
 }
 main .links .services img {
   width: 650px;
@@ -1163,6 +1167,342 @@ main .links .services .service-popup .hiddenService .closeBtn {
 main .links .services .service-popup.active {
   visibility: visible;
   opacity: 1;
+}
+main .links .events {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
+  background-color: rgba(249, 248, 248, 0.7529411765);
+}
+main .links .events .leftEvent {
+  text-align: start;
+}
+main .links .events .leftEvent p {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+main .links .events .leftEvent span.first {
+  display: inline-block;
+  color: #f91942;
+  background-color: #ffedf0;
+  margin: -6px 0px 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+main .links .events .leftEvent span.second {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+main .links .events .leftEvent span.second b {
+  color: #181818;
+}
+main .links .events .leftEvent .chekings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .links .events .leftEvent .chekings ul li {
+  color: #333;
+  transition: all 0.3sease-out;
+  font-size: 16px;
+}
+main .links .events .leftEvent .chekings ul li span {
+  color: #777;
+  font-weight: 400;
+}
+main .links .events .leftEvent .chekings ul li svg {
+  color: #fadfe4;
+  width: 32px;
+  height: 32px;
+}
+main .links .events .image img {
+  width: 420px;
+  height: 300px;
+}
+main .links .classifieds {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: rgba(249, 248, 248, 0.7529411765);
+}
+main .links .classifieds .image img {
+  width: 610px;
+  height: 200px;
+}
+main .links .classifieds .rightClassified {
+  text-align: start;
+}
+main .links .classifieds .rightClassified p {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+main .links .classifieds .rightClassified span.first {
+  display: inline-block;
+  color: #f91942;
+  background-color: #ffedf0;
+  margin: -6px 0px 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+main .links .classifieds .rightClassified span.second {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+main .links .classifieds .rightClassified span.second b {
+  color: #181818;
+}
+main .marketplace {
+  background-color: rgba(247, 243, 243, 0.8509803922);
+  padding: 80px;
+}
+main .marketplace .headPart {
+  display: flex;
+  justify-content: space-between;
+}
+main .marketplace .headPart .feature {
+  text-align: start;
+}
+main .marketplace .headPart .feature .highlight2 {
+  color: #7e700d;
+  background-color: #fcf6d8;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 6px;
+}
+main .marketplace .headPart .feature :nth-child(2) {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+main .marketplace .headPart .feature :nth-child(2) span {
+  position: relative;
+}
+main .marketplace .headPart .feature :nth-child(2) span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 6px;
+  background: rgba(241, 226, 174, 0.7490196078);
+}
+main .marketplace .headPart .images :first-child {
+  display: block;
+  padding: 10px 12px;
+  background-color: #ededed;
+  margin-bottom: 5px;
+  height: 46px;
+  border-radius: 5px;
+}
+main .marketplace .headPart .images :last-child {
+  padding: 10px 12px;
+  background-color: #ededed;
+  height: 42px;
+  border-radius: 5px;
+  margin-left: 45px;
+}
+main .marketplace .middlePart {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+main .marketplace .middlePart .leftPart .first {
+  background-color: #ebe3fa;
+  text-align: start;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+main .marketplace .middlePart .leftPart .first .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9479d9;
+  margin-top: 20px;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+main .marketplace .middlePart .leftPart .first .text p {
+  color: #452e81;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .marketplace .middlePart .leftPart .first .text span {
+  color: rgba(69, 46, 129, 0.768627451);
+}
+main .marketplace .middlePart .leftPart .first .text span b {
+  color: #452e81;
+}
+main .marketplace .middlePart .leftPart .second {
+  background-color: #deebfb;
+  text-align: start;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+main .marketplace .middlePart .leftPart .second .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #60aafc;
+  margin-top: 10px;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+main .marketplace .middlePart .leftPart .second .text {
+  padding-left: 10px;
+}
+main .marketplace .middlePart .leftPart .second .text p {
+  color: #2970be;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .marketplace .middlePart .leftPart .second .text span {
+  color: rgba(41, 112, 190, 0.8392156863);
+}
+main .marketplace .middlePart .leftPart .second .text span b {
+  color: #2970be;
+}
+main .marketplace .middlePart .leftPart .third {
+  background-color: #dff8e1;
+  text-align: start;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+main .marketplace .middlePart .leftPart .third .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6cc67e;
+  margin-top: 20px;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+main .marketplace .middlePart .leftPart .third .text {
+  padding-left: 20px;
+}
+main .marketplace .middlePart .leftPart .third .text p {
+  color: #1c752e;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .marketplace .middlePart .leftPart .third .text span {
+  color: rgba(28, 117, 46, 0.7803921569);
+}
+main .marketplace .middlePart .leftPart .third .text span b {
+  color: #1c752e;
+}
+main .marketplace .middlePart .carousel-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: rgba(237, 234, 234, 0.7529411765);
+}
+main .marketplace .middlePart .carousel-container p {
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+main .marketplace .middlePart .carousel-container .carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+main .marketplace .middlePart .carousel-container .carousel button {
+  color: white;
+  background-color: #222;
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+main .marketplace .middlePart .carousel-container .carousel button.left {
+  left: 10px;
+}
+main .marketplace .middlePart .carousel-container .carousel button.right {
+  right: 10px;
+}
+main .marketplace .middlePart .carousel-container .carousel .carousel-inner {
+  display: flex;
+  width: 400%;
+}
+main .marketplace .middlePart .carousel-container .carousel .carousel-inner .item {
+  width: 100%;
+  flex: 0 0 25%;
+  display: none;
+  transition: transform 0.5s ease-in-out;
+}
+main .marketplace .middlePart .carousel-container .carousel .carousel-inner .item a {
+  display: block;
+  width: 100%;
+}
+main .marketplace .middlePart .carousel-container .carousel .carousel-inner .item a img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+main .marketplace .middlePart .carousel-container .carousel .carousel-inner .active {
+  display: block;
+}
+main .marketplace .middlePart .carousel-container .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+main .marketplace .middlePart .carousel-container .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(159, 159, 159, 0.3019607843);
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+main .marketplace .middlePart .carousel-container .carousel-indicators li.active {
+  background-color: #222;
+}
+main .marketplace .middlePart .carousel-container span {
+  color: #7c7b7b;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

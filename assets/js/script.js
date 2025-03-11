@@ -47,6 +47,43 @@ document.getElementById('serviceLink').addEventListener('click', function(e) {
     window.open(href, '_blank');
 });
 
+//eventImg link: new tab
+document.getElementById('eventLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//classifiedImg link: new tab
+document.getElementById('classifiedLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//slideImages link: new tab
+document.getElementById('slideLink1').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+document.getElementById('slideLink2').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+document.getElementById('slideLink3').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+document.getElementById('slideLink4').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+
 //headings visibility
 const headings = document.querySelectorAll('.heading');
 function nextHeading() {
@@ -134,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //service cards transition on scroll
 document.addEventListener("scroll", function () {
-    let serviceCards = document.querySelector(".service");
+    let serviceCards = document.querySelector(".serviceCards");
     let position = serviceCards.getBoundingClientRect().top;
     let windowHeight = window.innerHeight;
     if (position < windowHeight - 50) {
@@ -162,3 +199,44 @@ function openPopup() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+//nav links scrolling fixed
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navLink");
+    const linkDiv = document.querySelector(".links");
+    const sectionTop = linkDiv.offsetTop;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= sectionTop) {
+        navbar.classList.add("fixed-nav");
+    } else {
+        navbar.classList.remove("fixed-nav");
+    }
+});
+
+$(document).ready(function () {
+    let currentIndex = 0;
+    let totalItems = $(".carousel-inner .item").length;
+
+    function showSlide(index) {
+        $(".carousel-inner .item").removeClass("active").eq(index).addClass("active");
+        $(".carousel-indicators li").removeClass("active").eq(index).addClass("active");
+    }
+
+    $(".carousel-indicators li").each(function (index) {
+        $(this).attr("data-slide", index);
+    });
+
+    $(".carousel-indicators li").click(function () {
+        currentIndex = $(this).data("slide");
+        showSlide(currentIndex);
+    });
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showSlide(currentIndex);
+    }, 3000); // Auto-slide every 3 seconds
+    
+    showSlide(0);
+});
+
+ 
