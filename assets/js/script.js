@@ -156,6 +156,21 @@ function btnClose() {
     playVideo.classList.remove("active");
 }
 
+//front-end video opening
+function videoPlay() {
+    const playVideo = document.getElementById("frontEndVideo");
+    const video = document.getElementById("youtubeFrontEnd");
+
+    playVideo.classList.add("active");
+    video.src = video.src.replace("&autoplay=1", "");
+}
+function videoClose() {
+    const playVideo = document.getElementById("frontEndVideo");
+    const video = document.getElementById("youtubeFrontEnd");
+
+    playVideo.classList.remove("active");
+}
+
 //navbar scrolling
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById("navbar");
@@ -201,19 +216,20 @@ function closePopup() {
 }
 
 //nav links scrolling fixed
-window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navLink");
-    const linkDiv = document.querySelector(".links");
-    const sectionTop = linkDiv.offsetTop;
-    const scrollPosition = window.scrollY;
+// window.addEventListener("scroll", function () {
+//     const navbar = document.querySelector(".navLink");
+//     const linkDiv = document.querySelector(".links");
+//     const sectionTop = linkDiv.offsetTop;
+//     const scrollPosition = window.scrollY;
 
-    if (scrollPosition >= sectionTop) {
-        navbar.classList.add("fixed-nav");
-    } else {
-        navbar.classList.remove("fixed-nav");
-    }
-});
+//     if (scrollPosition >= sectionTop) {
+//         navbar.classList.add("fixed-nav");
+//     } else {
+//         navbar.classList.remove("fixed-nav");
+//     }
+// });
 
+//carusel-slider
 $(document).ready(function () {
     let currentIndex = 0;
     let totalItems = $(".carousel-inner .item").length;
@@ -234,9 +250,18 @@ $(document).ready(function () {
     setInterval(function () {
         currentIndex = (currentIndex + 1) % totalItems;
         showSlide(currentIndex);
-    }, 3000); // Auto-slide every 3 seconds
+    }, 3000);
     
     showSlide(0);
 });
 
+//monetization scroll
+document.addEventListener("scroll", function () {
+    let monMidCards = document.querySelector(".monetization .middle");
+    let position = monMidCards.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+    if (position < windowHeight - 50) {
+        monMidCards.classList.add("show");
+    }
+});
  

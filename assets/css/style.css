@@ -1229,6 +1229,7 @@ main .links .classifieds {
   justify-content: space-around;
   padding: 50px;
   background-color: rgba(249, 248, 248, 0.7529411765);
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
 }
 main .links .classifieds .image img {
   width: 610px;
@@ -1261,8 +1262,9 @@ main .links .classifieds .rightClassified span.second b {
   color: #181818;
 }
 main .marketplace {
-  background-color: rgba(247, 243, 243, 0.8509803922);
+  background-color: #f8f8f8;
   padding: 80px;
+  border-bottom: 1px solid rgba(208, 205, 205, 0.7529411765);
 }
 main .marketplace .headPart {
   display: flex;
@@ -1503,6 +1505,415 @@ main .marketplace .middlePart .carousel-container .carousel-indicators li.active
 main .marketplace .middlePart .carousel-container span {
   color: #7c7b7b;
   font-size: 14px;
+}
+main .monetization {
+  padding: 80px;
+}
+main .monetization .center {
+  margin-bottom: 50px;
+}
+main .monetization .center .highlight2 {
+  color: #7e700d;
+  background-color: #fcf6d8;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 6px;
+}
+main .monetization .center :nth-child(2) {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+main .monetization .center :nth-child(3) {
+  color: #666;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+main .monetization .center :nth-child(3) b {
+  color: #222;
+  font-weight: 500;
+}
+main .monetization .middle {
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+main .monetization .middle.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+main .monetization .middle .leftFeature .first {
+  padding: 50px;
+  width: 100%;
+  text-align: start;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: #f8f8f8;
+}
+main .monetization .middle .leftFeature .first .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .monetization .middle .leftFeature .first .head img {
+  padding: 5px 5px 5px 0;
+}
+main .monetization .middle .leftFeature .first .head h3 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+main .monetization .middle .leftFeature .first .midd {
+  margin-bottom: 20px;
+}
+main .monetization .middle .leftFeature .first .midd p {
+  color: #707070;
+  font-size: 16px;
+}
+main .monetization .middle .leftFeature .first .midd span {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .monetization .middle .leftFeature .first .allTable {
+  width: 100%;
+}
+main .monetization .middle .leftFeature .first .allTable span.head {
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px 6px 0 0;
+  padding: 16px 10px;
+  margin-bottom: 0;
+  display: inline-block;
+  line-height: 19px;
+  width: 100%;
+  text-align: center;
+  background: #282828;
+  color: #fff;
+}
+main .monetization .middle .leftFeature .first .allTable span.head .highlight2 {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.71);
+  line-height: 14px;
+  display: inline-block;
+  font-style: normal;
+}
+main .monetization .middle .leftFeature .first .allTable .table table {
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.04);
+  margin: 0;
+  border: none;
+}
+main .monetization .middle .leftFeature .first .allTable .table td, main .monetization .middle .leftFeature .first .allTable .table th {
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  word-wrap: break-word;
+  font-weight: 600;
+  color: #333;
+}
+main .monetization .middle .leftFeature .first .allTable .table td {
+  color: #ccc;
+}
+main .monetization .middle .leftFeature .first .allTable .table tr th:first-child {
+  width: 35%;
+  background: #fff;
+}
+main .monetization .middle .leftFeature .first .allTable .table tr th {
+  width: 20%;
+  background: #fff;
+  padding: 20px 10px;
+}
+main .monetization .middle .leftFeature .first .allTable .table tr:nth-child(2n+1) {
+  background: #fafafa;
+}
+main .monetization .middle .leftFeature .first .allTable .table .price {
+  font-size: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin: 7px 0 -5px 0;
+}
+main .monetization .middle .leftFeature .first .allTable .table span.free-pack, main .monetization .middle .leftFeature .first .allTable .table span.standard-pack, main .monetization .middle .leftFeature .first .allTable .table span.premium-pack {
+  background: #f2f2f2;
+  color: #777;
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-weight: 500;
+}
+main .monetization .middle .leftFeature .first .allTable .table span.standard-pack, main .monetization .middle .leftFeature .first .allTable .table span.premium-pack {
+  background: #e7f2fa;
+  color: #4a7e99;
+}
+main .monetization .middle .leftFeature .first .allTable .table span.premium-pack {
+  background: #fcf3cd;
+  color: #857843;
+}
+main .monetization .middle .leftFeature .first .allTable .table .check img {
+  width: 24px;
+}
+main .monetization .middle .leftFeature .first .allTable .table .delete img {
+  width: 21px;
+}
+main .monetization .middle .leftFeature .first .allTable .table th:first-child,
+main .monetization .middle .leftFeature .first .allTable .table td:first-child {
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+  text-align: right;
+}
+main .monetization .middle .leftFeature .first .allTable .table .p {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 130px;
+}
+main .monetization .middle .leftFeature .first .allTable .table #number {
+  font-size: 16px;
+  color: #333;
+}
+main .monetization .middle .leftFeature .first .allTable .table .overage {
+  color: #777;
+  font-weight: 400;
+}
+main .monetization .middle .leftFeature .second {
+  padding: 48px 50px 53px;
+  width: 100%;
+  text-align: start;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  margin-bottom: 30px;
+}
+main .monetization .middle .leftFeature .second .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .monetization .middle .leftFeature .second .head img {
+  padding: 5px 5px 5px 0;
+}
+main .monetization .middle .leftFeature .second .head h3 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+main .monetization .middle .leftFeature .second .midd {
+  margin-bottom: 20px;
+}
+main .monetization .middle .leftFeature .second .midd p {
+  color: #707070;
+  font-size: 16px;
+}
+main .monetization .middle .leftFeature .second .midd p b {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .monetization .middle .leftFeature .third {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f7ff;
+  padding: 40px;
+  width: 100%;
+  text-align: start;
+  border-radius: 8px;
+}
+main .monetization .middle .leftFeature .third .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #428cdc;
+  margin-top: 40px;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+main .monetization .middle .leftFeature .third .right h3 {
+  color: #246ab7;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+main .monetization .middle .leftFeature .third .right p {
+  color: #246ab7;
+  font-size: 16px;
+}
+main .monetization .middle .leftFeature .third .right p b {
+  color: #246ab7;
+  font-size: 16px;
+}
+main .monetization .rightFeature .first {
+  padding: 50px 50px 60px;
+  width: 100%;
+  text-align: start;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+}
+main .monetization .rightFeature .first .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+main .monetization .rightFeature .first .head img {
+  padding: 5px 5px 5px 0;
+}
+main .monetization .rightFeature .first .head h3 {
+  color: #222;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+main .monetization .rightFeature .first .midd {
+  margin-bottom: 40px;
+}
+main .monetization .rightFeature .first .midd p {
+  color: #707070;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+main .monetization .rightFeature .first .midd p b {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .monetization .rightFeature .second {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4efff;
+  padding: 40px;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+main .monetization .rightFeature .second .left h3 {
+  color: #6148a3;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+main .monetization .rightFeature .second .left p {
+  color: #6148a3;
+  font-size: 16px;
+}
+main .monetization .rightFeature .second .left p b {
+  color: #6148a3;
+  font-size: 16px;
+}
+main .monetization .rightFeature .second .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .monetization .rightFeature .second .image img {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+main .monetization .rightFeature .third {
+  background-color: #f8f8f8;
+  padding: 40px;
+  width: 100%;
+  text-align: start;
+  border-radius: 8px;
+}
+main .monetization .rightFeature .third .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+main .monetization .rightFeature .third .head img {
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+main .monetization .rightFeature .third .head h3 {
+  color: #222;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 12px 16px;
+}
+main .monetization .rightFeature .third .midd {
+  margin: 20px 0 40px 0;
+}
+main .monetization .rightFeature .third .midd p {
+  color: #707070;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+main .monetization .rightFeature .third .midd p b {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .monetization .rightFeature .third .foot {
+  padding: 15px 20px;
+  background-color: #fffce7;
+  margin: 15px 0 0;
+}
+main .monetization .rightFeature .third .foot p {
+  color: #959033;
+  font-size: 16px;
+}
+main .monetization .rightFeature .third .foot p b {
+  color: #959033;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .front-end {
+  padding: 80px;
+  background-color: #f8f8f8;
+}
+main .front-end .left {
+  text-align: start;
+}
+main .front-end .left .highlight2 {
+  color: #7e700d;
+  background-color: #fcf6d8;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 6px;
+}
+main .front-end .left :nth-child(2) {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+main .front-end .left :nth-child(3) {
+  color: #666;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+main .front-end .left :nth-child(3) b {
+  color: #222;
+  font-weight: 500;
+}
+main .front-end .left .playBtn {
+  background-color: #ffdde3;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  color: #f91942;
+  font-size: 15px;
+  font-weight: 500;
+}
+main .front-end .left .playBtn:hover {
+  background-color: #f91942;
+  color: white;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
