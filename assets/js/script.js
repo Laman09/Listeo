@@ -229,7 +229,7 @@ function closePopup() {
 //     }
 // });
 
-//carusel-slider
+//carusel-slider marketplace
 $(document).ready(function () {
     let currentIndex = 0;
     let totalItems = $(".carousel-inner .item").length;
@@ -250,7 +250,7 @@ $(document).ready(function () {
     setInterval(function () {
         currentIndex = (currentIndex + 1) % totalItems;
         showSlide(currentIndex);
-    }, 3000);
+    }, 5000);
     
     showSlide(0);
 });
@@ -264,4 +264,58 @@ document.addEventListener("scroll", function () {
         monMidCards.classList.add("show");
     }
 });
- 
+
+//carusel-slider front-end
+$(document).ready(function () {
+    let currentIndex = 0;
+    let totalItems = $(".carousel-inner-2 .item").length;
+
+    function showSlide(index) {
+        $(".carousel-inner-2 .item").removeClass("active").eq(index).addClass("active");
+        $(".carousel-indicators-2 li").removeClass("active").eq(index).addClass("active");
+    }
+
+    $(".carousel-indicators-2 li").each(function (index) {
+        $(this).attr("data-slide", index);
+    });
+
+    $(".carousel-indicators-2 li").click(function () {
+        currentIndex = $(this).data("slide");
+        showSlide(currentIndex);
+    });
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showSlide(currentIndex);
+    }, 5000);
+    
+    showSlide(0);
+});
+
+//reviewImg link: new tab
+document.getElementById('reviewLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+document.getElementById('googleLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    window.open(href, '_blank');
+});
+
+//button back to top
+document.addEventListener("DOMContentLoaded", () => {
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
